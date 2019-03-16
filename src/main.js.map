@@ -1,0 +1,8 @@
+{
+    "version": 3,
+    "file": "main.js",
+    "sourceRoot": "",
+    "sources": ["main.ts"],
+    "names": [],
+    "mappings": "AAAA,SAAS,IAAI,CAAC,QAAgB;IAC1B,OAAO,CAAC,GAAG,CAAC,gBAAc,QAAU,CAAC,CAAA;AACzC,CAAC;AACD,IAAI,CAAC,MAAM,CAAC,CAAA"
+}
