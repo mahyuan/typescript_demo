@@ -57,3 +57,75 @@ var Direction;
     Direction[Direction["Yes"] = 1] = "Yes";
 })(Direction || (Direction = {}));
 console.log(Direction.Yes);
+function somefunc1(_a) {
+    var _b = _a.x, x = _b === void 0 ? 0 : _b, _c = _a.y, y = _c === void 0 ? 0 : _c;
+    return console.log(x, y);
+}
+function somefunc3(_a) {
+    var _b = _a.x, x = _b === void 0 ? 2 : _b, _c = _a.y, y = _c === void 0 ? 4 : _c, _d = _a.z, z = _d === void 0 ? 3 : _d;
+    console.log('Pointer3d');
+}
+var MySQL = /** @class */ (function () {
+    function MySQL(host, port) {
+        this.host = host;
+        this.port = port;
+        console.log('正在连接 ' + this.host + ':' + this.port + ' 的数据库....');
+    }
+    return MySQL;
+}());
+var mysql = new MySQL('localhost', 3306);
+var Person = /** @class */ (function () {
+    function Person(IdCard, name, age) {
+        this.IdCard = '23xxxxxxxxxx';
+        // this.IdCard = IdCard // readonly
+        this.name = name;
+        this.age = age;
+        console.log("id_card:" + IdCard + ", name:" + this.name + ", age: " + this.age);
+    }
+    return Person;
+}());
+var Lucy = new Person('42xxxx20130312xxxx', 'Lucy', 6);
+var Lily = { IdCard: '42xxx111', name: 'Lily', age: 23, city: 'beijing' };
+console.log('Lily', Lily);
+// private , protected
+// private 私有变量，只能自己访问
+/*
+class Dad {
+  public hoby: string
+  protected lastName: string;
+  private money: number
+  constructor(hoby: string, lastName: string, money: number) {
+    this.hoby = hoby
+  }
+}
+class Son extends Dad {
+  constructor() {
+    super()
+    console.log('hoby', this.hoby)
+  }
+}
+const dad = new Dad()
+dad.hoby = 'basball'
+dad.money = 1222
+
+const son = new Son()
+son.hoby = 'game'
+*/
+var Dad = /** @class */ (function () {
+    function Dad() {
+    }
+    return Dad;
+}());
+var Son = /** @class */ (function (_super) {
+    __extends(Son, _super);
+    function Son() {
+        return _super.call(this) || this;
+    }
+    return Son;
+}(Dad));
+var d = new Dad();
+d.public_something = 'some_thing';
+d.default_something = 'default_thing';
+var s = new Son();
+s.public_something = 'some_thing';
+s.default_something = 'default_thing';
